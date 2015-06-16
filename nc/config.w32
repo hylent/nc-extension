@@ -1,0 +1,5 @@
+ARG_ENABLE("nc", "enable nc framework", "no");
+
+if (PHP_NC != "no") {
+  EXTENSION("nc", "nc.c kernel.c loader.c sql.c");
+}
