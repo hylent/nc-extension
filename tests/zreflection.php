@@ -1,0 +1,2 @@
+<?php
+reflectionextension::export('nc');
