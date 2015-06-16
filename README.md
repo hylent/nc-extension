@@ -8,7 +8,7 @@ The main purpose of this repo is to set an milestone to PHP kernel studying.
 
 Kernel module is designed to solve dependency issues between objects.
 
-```
+```php
 // Containers
 class Container extends Nc\Kernel {}
 $c = new Container();
@@ -76,7 +76,7 @@ var_dump($a['c']); // C, outputs 'C' again, because `alwaysNew` is set to `true`
 
 Loader module aims at class auto-loading.
 
-```
+```php
 // Class `C` is in path `./c.php`
 (new Nc\Loader\ClassPathLoader)->add('C', __DIR__ . '/c.php');
 new C;
@@ -91,7 +91,7 @@ new Mall\Controller\Product;
 Sql module aims at wrapping low-level database connections, transactions, queries, results fetching.
 For now it supports Mysql/PostgreSQL/Oracle.
 
-```
+```php
 // Connection
 $connection = new Nc\Sql\PdoConnection('mysql:host=127.0.0.1;port=3306;dbname=nc', 'nc', 'nc');
 
